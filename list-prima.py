@@ -16,3 +16,5 @@ for i in range(len(a)):
         jlh+=1
 
 print(jlh)
+
+Kompleksitas = O(n)
