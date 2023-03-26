@@ -1,22 +1,10 @@
-a = ['String','pattern']#list(input().split())
-b = ['String','teks']#list(input().split())
+sub = input().upper()
+string = input().upper()
+status = "Tidak Ketemu"
+for i in range(len(string)-len(sub)+1):
+    if(string[i:i+len(sub)] == sub):
+        status = "Ketemu"
+        break
+print(status)
 
-arr_a = []
-arr_b = []
-
-for i in range(len(a)):
-    temp=[]
-    for j in range(len(a[i])):
-        temp.append(a[i][j])
-    arr_a.append(temp)
-
-for i in range(len(b)):
-    temp=[]
-    for j in range(len(b[i])):
-        temp.append(b[i][j])
-    arr_b.append(temp)
-
-print(arr_a)
-print(arr_b)
-
-# Belum Solved
+# Kompleksitas = O(n)
