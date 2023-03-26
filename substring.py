@@ -7,6 +7,6 @@ for i in range(len(string)-len(sub)+1):
         break
 print(status)
 
-# Kompleksitas = O(n)
+# kompleksitas = O(n)
 
-# Code by : gonstealyoman
+# code by : gonstealyoman
