@@ -17,4 +17,4 @@ for i in range(len(a)):
 
 print(jlh)
 
-Kompleksitas = O(n^2)
+# kompleksitas = O(n^2)
