@@ -8,3 +8,5 @@ for i in range(len(string)-len(sub)+1):
 print(status)
 
 # Kompleksitas = O(n)
+
+# Code by : gonstealyoman
