@@ -33,3 +33,23 @@ else:
     coin(string,maxi)
     
 # kompleksitas = O(n)
+
+
+
+
+
+# versi short
+
+koin = input()
+posisi = -1
+beda = koin[0]
+if(beda != koin[1]):
+    posisi = 1
+else:
+    for i in range(len(koin)):
+        if(koin[i] != beda):
+            posisi = i+1
+            break
+print(posisi)
+
+# code by : gonstealyoman
