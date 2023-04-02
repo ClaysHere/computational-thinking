@@ -34,3 +34,10 @@ for i in range(len(combinations)):
     for j in range(len(combinations[i])):
         print(combinations[i][j],end=' ')
     print()# cetak hasil kombinasi
+    
+    
+'''
+Kompleksitas waktu dari kode tersebut adalah O(2^n), di mana n adalah jumlah bilangan dalam list numbers. Ini disebabkan oleh fungsi find_combinations, yang memiliki kompleksitas waktu sebesar O(2^n), karena pada setiap level rekursif kita memiliki dua pilihan: menambahkan bilangan ke dalam kombinasi saat ini atau tidak menambahkan bilangan tersebut.
+
+Kompleksitas ruang dari kode tersebut adalah O(n), di mana n adalah jumlah bilangan dalam list numbers. Hal ini disebabkan oleh list results dan list current, yang masing-masing menyimpan data dengan ukuran O(n). Selain itu, karena fungsi backtrack dipanggil secara rekursif, maka setiap pemanggilan fungsi akan menambahkan frame pada stack, sehingga jumlah maksimum stack frame yang dibutuhkan adalah O(n). Oleh karena itu, kompleksitas ruang dari kode tersebut adalah O(n).
+'''
