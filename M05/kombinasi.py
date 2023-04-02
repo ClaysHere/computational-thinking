@@ -46,3 +46,33 @@ Hal ini disebabkan oleh list results dan list current, yang masing-masing menyim
 Selain itu, karena fungsi backtrack dipanggil secara rekursif, maka setiap pemanggilan fungsi akan menambahkan frame pada stack, 
 sehingga jumlah maksimum stack frame yang dibutuhkan adalah O(n). Oleh karena itu, kompleksitas ruang dari kode tersebut adalah O(n).
 '''
+
+
+def find_combinations(arr, n, i, res, results):
+    if n == 0:
+        results.append(res[:])
+        return
+    if i == len(arr) or n < 0:
+        return
+    res.append(arr[i])
+    find_combinations(arr, n - arr[i], i, res, results)
+    res.pop()
+    find_combinations(arr, n, i + 1, res, results)
+
+# contoh penggunaan
+arr = list(map(int,input().split()))
+n = int(input())
+results = []
+find_combinations(arr, n, 0, [], results)
+
+for i in range(len(results)):
+    for j in range(len(results[i])):
+        print(results[i][j],end=' ')
+    print()# cetak hasil kombinasi
+
+'''
+Kompleksitas dari kode di atas adalah O(2^N), di mana N adalah jumlah elemen dalam list arr. 
+Hal ini karena untuk setiap elemen dalam list arr, ada dua kemungkinan aksi yang dapat diambil, 
+yaitu memilih atau tidak memilih elemen tersebut, sehingga jumlah kombinasi yang mungkin adalah 2 pangkat N. 
+Oleh karena itu, kompleksitas fungsi find_combinations() secara keseluruhan adalah O(2^N).
+'''
