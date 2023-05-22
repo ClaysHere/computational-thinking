@@ -18,4 +18,4 @@ amount = int(input())
 
 print(coin_change(coins, amount))
 
-# Kompleksitas O(N * K)
+# Kompleksitas O(n * amount)
