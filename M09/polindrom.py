@@ -1,4 +1,4 @@
-def longest_palindrome(s):
+def longest_palindrome(s,result):
     n = len(s)
     dp = [[0 for _ in range(n)] for _ in range(n)]
     for i in range(n):
@@ -10,11 +10,16 @@ def longest_palindrome(s):
                 dp[i][j] = dp[i+1][j-1] + 2
             else:
                 dp[i][j] = max(dp[i+1][j], dp[i][j-1])
-    return dp[0][n-1]
+    result.append(dp[0][n-1])
+    return result
 
+result = []
 t = int(input())
 for i in range(t):
     s = input()
-    print(longest_palindrome(s))
+    longest_palindrome(s,result)
+    
+for i in range(len(result)):
+    print(result[i])
 
 # Komppleksitas O(n^2)
